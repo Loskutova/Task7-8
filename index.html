@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    
+<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+ 
+<script>
+$(function(){
+
+   $('input').on('mouseenter', function(){
+      $(this).siblings('.help').animate({opacity: "show"}, "fast");
+   });
+   $('input').on('mouseleave', function(){
+      $(this).siblings('.help').animate({opacity: "hide"}, "fast");
+   });
+   $('.button').on('click',function(){
+      $('.help').show('slow');
+   });
+   });
+</script>
+
+</script>
+<style>
+body{
+  background: white;
+}
+form{
+  background: lightgrey;
+ width: 600px;
+  margin: 0 auto;
+  padding: 15px;
+ 
+}
+.help{
+  padding: 2px 5px;
+  background: white;
+  border-radius: 5px;
+  display: none;
+  width: 250px;
+  border:1px solid grey;
+
+}
+label{
+  width: 100px;
+  padding: 10px;
+  display: inline-block;
+  
+}
+.button{
+  display: inline-block;
+  border-radius:5px;
+  padding: 5px;
+  margin: 5px 5px;
+  background: white;
+  border: 1px solid grey;
+}
+
+</style>
+</head>
+<body>
+          <!-- HINT -->
+<form>
+  <div>
+    <label for="firstname">FirstName</label>
+    <input id="firstname" type="text">
+    <span class="help">Please provide your First name</span>
+  </div>  
+  <div>
+    <label for="Lastname">Lastname</label>
+    <input id="Lastname" type="text">
+    <span class="help">Please provide also your lastname</span>
+  </div>  
+  <div>
+    <label for="Address">Address</label>
+    <input id="Address" type="text">
+    <span class="help"> Your  home or work Adress</span>
+  </div>  
+  <span class="button">Show help</span>
+</form>
+
+      
+
+
+</body>
+</html>
